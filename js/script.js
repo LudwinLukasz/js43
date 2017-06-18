@@ -78,27 +78,26 @@ Card.prototype = {
 }
 
 var board = {
-    name: 'Kanban Board',
-    addColumn: function(column) {
-      this.$element.append(column.$element);
-      initSortable();
-    },
-    $element: $('#board .column-container')
+	name: 'Kanban Board',
+	addColumn: function(column) {
+		this.$element.append(column.$element);
+		initSortable();
+	},
+	$element: $('#board .column-container')
 };
 
 function initSortable() {
-    $('.column-card-list').sortable({
-      connectWith: '.column-card-list',
-      placeholder: 'card-placeholder'
-    }).disableSelection();
-  }
+	$('.column-card-list').sortable({
+		connectWith: '.column-card-list',
+		placeholder: 'card-placeholder'
+	}).disableSelection();
+}
 
-  $('.create-column')
-  .click(function(){
+$('.create-column').click(function(){
 	var name = prompt('Enter a column name');
 	var column = new Column(name);
-    	board.addColumn(column);
-  });
+	board.addColumn(column);
+});
 
 // TWORZENIE KOLUMN
 var todoColumn = new Column('To do');
