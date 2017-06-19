@@ -99,21 +99,21 @@ $('.create-column').click(function(){
 	board.addColumn(column);
 });
 
-// TWORZENIE KOLUMN
+// COLUMNS CREATION
 var todoColumn = new Column('To do');
 var doingColumn = new Column('Doing');
 var doneColumn = new Column('Done');
 
-// DODAWANIE KOLUMN DO TABLICY
+// ADDING COLUMNS TO BOARD
 board.addColumn(todoColumn);
 board.addColumn(doingColumn);
 board.addColumn(doneColumn);
 
-// TWORZENIE NOWYCH EGZEMPLARZY KART
+// CREATING NEW CARDS INSTANCES
 var card1 = new Card('New task');
 var card2 = new Card('Create kanban boards');
 
-// DODAWANIE KART DO KOLUMN
+// ADDING CARDS TO COLUMNNs
 todoColumn.addCard(card1);
 doingColumn.addCard(card2);
 
