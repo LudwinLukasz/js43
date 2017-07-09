@@ -1,0 +1,22 @@
+﻿.card-placeholder {
+	background: red;
+}
+
+.column-container {
+	width: 100%;
+	height: 500px;
+	display: block;
+	border: solid red 1px;
+}
+
+.column {
+	display: inline-block;
+	min-height: 300px;
+	background: blue;
+	border: solid 2px black;
+	margin: 10px;
+}
+
+button {
+	color: red;
+}
